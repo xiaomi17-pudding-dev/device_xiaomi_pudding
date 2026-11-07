@@ -2710,8 +2710,10 @@ odm/etc/sensors/config/vi5300_tof_0.json
 odm/etc/vintf/manifest/miaon_frame.xml
 odm/etc/vintf/manifest/vendor.xiaomi.camera.aon-impl.xml
 odm/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice.aidl.xml
-odm/etc/vintf/manifest.xml
 odm/lib64/libmiSensorCtrl.so
+# Stock odm/etc/vintf/manifest.xml only declares ContextHub (merged from the QMI service
+# fragment); install it as that fragment instead of the top-level odm manifest
+odm/etc/vintf/manifest.xml:odm/etc/vintf/manifest/android.hardware.contexthub-service.qmi.xml
 odm/lib64/sensors.touch.detect.so
 
 # Touch
