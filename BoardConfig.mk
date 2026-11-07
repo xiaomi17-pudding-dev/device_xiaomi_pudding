@@ -58,6 +58,22 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtbs
 BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbs/dtbo.img
 
+# Kernel modules: stock vendor_boot ramdisk, vendor_dlkm and system_dlkm sets with their
+# stock load and block lists. Stock load lists repeat entries; keep the first occurrence.
+KERNEL_MODULES_LOAD = $(strip $(shell awk '!seen[$$0]++' $(1)))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/vendor_ramdisk/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(call KERNEL_MODULES_LOAD,$(KERNEL_PATH)/vendor_ramdisk/modules.load)
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(call KERNEL_MODULES_LOAD,$(KERNEL_PATH)/vendor_ramdisk/modules.load.recovery)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(KERNEL_PATH)/vendor_ramdisk/modules.blocklist
+BOARD_USES_VENDOR_DLKMIMAGE := true
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/vendor_dlkm/*.ko)
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(call KERNEL_MODULES_LOAD,$(KERNEL_PATH)/vendor_dlkm/modules.load)
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(KERNEL_PATH)/vendor_dlkm/modules.blocklist
+BOARD_USES_SYSTEM_DLKMIMAGE := true
+BOARD_SYSTEM_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/system_dlkm/*.ko)
+BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(call KERNEL_MODULES_LOAD,$(KERNEL_PATH)/system_dlkm/modules.load)
+BOARD_SYSTEM_KERNEL_MODULES_BLOCKLIST_FILE := $(KERNEL_PATH)/vendor_dlkm/system_dlkm.modules.blocklist
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
