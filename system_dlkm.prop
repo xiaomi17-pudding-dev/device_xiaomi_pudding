@@ -1,7 +1,0 @@
-# Miscellaneous
-ro.product.device_for_attestation=pudding
-ro.product.manufacturer_for_attestation=Xiaomi
-ro.product.system_dlkm.cert=25113PN0EG
-ro.product.system_dlkm.marketname=Xiaomi 17
-ro.system_dlkm.build.version.sdk_full=36.0
-

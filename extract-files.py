@@ -11,6 +11,8 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/xiaomi/pudding',
+    'device/xiaomi/sm8850-common',
+    'vendor/xiaomi/sm8850-common',
 ]
 
 module = ExtractUtilsModule(
@@ -20,5 +22,7 @@ module = ExtractUtilsModule(
 )
 
 if __name__ == '__main__':
-    utils = ExtractUtils.device(module)
+    utils = ExtractUtils.device_with_common(
+        module, 'sm8850-common', module.vendor
+    )
     utils.run()
