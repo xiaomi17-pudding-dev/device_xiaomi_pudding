@@ -1,4 +1,4 @@
-# Android device tree for Android Generic System (generic)
+# Android device tree for Xiaomi 17 (pudding)
 
 ```
 #
