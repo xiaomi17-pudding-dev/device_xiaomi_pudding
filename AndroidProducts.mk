@@ -7,6 +7,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_pudding.mk
 
 COMMON_LUNCH_CHOICES := \
+    lineage_pudding-eng \
     lineage_pudding-user \
-    lineage_pudding-userdebug \
-    lineage_pudding-eng
+    lineage_pudding-userdebug
