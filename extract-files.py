@@ -12,6 +12,11 @@ from extract_utils.main import (
 namespace_imports = [
     'device/xiaomi/pudding',
     'device/xiaomi/sm8850-common',
+    'hardware/qcom-caf/sm8850',
+    'hardware/qcom-caf/wlan',
+    'vendor/qcom/opensource/commonsys/display',
+    'vendor/qcom/opensource/commonsys-intf/display',
+    'vendor/qcom/opensource/dataservices',
     'vendor/xiaomi/sm8850-common',
 ]
 
