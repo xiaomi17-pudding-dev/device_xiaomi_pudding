@@ -56,7 +56,7 @@ odm/vendor/etc/dolby_vision.cfg
 odm/vendor/persist/display/dolby_vision.cfg
 
 # Camera
-odm/bin/hw/vendor.qti.camera.provider-service_64
+odm/bin/hw/vendor.qti.camera.provider-service_64;DISABLE_DEPS;REQUIRED=libexif,libgralloctypes,android.hardware.graphics.mapper@2.0,android.hardware.graphics.mapper@3.0,android.hardware.graphics.mapper@4.0,libcamera_metadata,android.hidl.allocator@1.0,android.hidl.memory@1.0,libtinyxml2,libutilscallstack,android.hardware.camera.device-V3-ndk,android.hardware.camera.metadata-V3-ndk,android.hardware.camera.provider-V3-ndk,android.hardware.common.fmq-V1-ndk
 odm/etc/camera/AIGesture/buling_1s.png
 odm/etc/camera/AIGesture/buling_2s.png
 odm/etc/camera/AIGesture/buling_3s.png
@@ -775,7 +775,7 @@ odm/lib64/camera/components/com.qti.node.aon.so
 odm/lib64/camera/components/com.qti.node.customhwnode.so
 odm/lib64/camera/components/com.qti.node.depth.so
 odm/lib64/camera/components/com.qti.node.depthprovider.so
-odm/lib64/camera/components/com.qti.node.dewarp.so
+odm/lib64/camera/components/com.qti.node.dewarp.so;DISABLE_DEPS;REQUIRED=libhidltransport,libqti_vndfwk_detect,android.hardware.graphics.common@1.2,android.hardware.graphics.mapper@2.1,libdmabufheap,libgralloccore,libgrallocutils,libmapperutils,android.hardware.graphics.common@1.1,libdisplayconfig.qti,libgralloc.qti,libgralloctypes,android.hardware.graphics.allocator-V2-ndk
 odm/lib64/camera/components/com.qti.node.dummydepth.so
 odm/lib64/camera/components/com.qti.node.dummyrtb.so
 odm/lib64/camera/components/com.qti.node.dummysat.so
@@ -976,7 +976,7 @@ odm/lib64/camera/zsl/com.xiaomi.zsl.mfnr.so
 odm/lib64/camera/zsl/com.xiaomi.zsl.nightmotion.so
 odm/lib64/camera/zsl/com.xiaomi.zsl.single.so
 odm/lib64/camera/zsl/com.xiaomi.zsl.sr.so
-odm/lib64/camx.device-impl.so
+odm/lib64/camx.device-impl.so;DISABLE_DEPS;REQUIRED=libcamera_metadata,libexif,android.hardware.camera.device-V3-ndk,vendor.qti.hardware.display.config-V18-ndk
 odm/lib64/com.qti.camx.chiiqutils.so
 odm/lib64/com.qti.chifeaturecompatibility.so
 odm/lib64/com.qti.chiusecaseselector.so
@@ -1070,7 +1070,7 @@ odm/lib64/libauto_focus_stark.so
 odm/lib64/libbitmlenginev2.so
 odm/lib64/libc++_shared.so
 odm/lib64/libcamera.xiaomi.catchlog.so
-odm/lib64/libcamerabuffer.so
+odm/lib64/libcamerabuffer.so;DISABLE_DEPS;REQUIRED=android.hardware.graphics.common@1.2,android.hardware.graphics.mapper@2.1,libdmabufheap,libgralloccore,libgrallocutils,libmapperutils,android.hardware.graphics.common@1.1,libdisplayconfig.qti,libgralloc.qti,libgralloctypes,libhidltransport,android.hardware.graphics.allocator-V2-ndk
 odm/lib64/libcameraheif.so
 odm/lib64/libcameraopt_stub.so
 odm/lib64/libcamlog.so
@@ -1087,7 +1087,7 @@ odm/lib64/libcamxhwlfrontend.so
 odm/lib64/libcamxhwlipedriver.so
 odm/lib64/libcamxhwnodecontext.so
 odm/lib64/libcamxhwquery.so
-odm/lib64/libcamximageformatutils.so
+odm/lib64/libcamximageformatutils.so;DISABLE_DEPS;REQUIRED=android.hardware.graphics.common@1.2,android.hardware.graphics.mapper@2.1,libdmabufheap,libgralloccore,libgrallocutils,libmapperutils,android.hardware.graphics.common@1.1,libdisplayconfig.qti,libgralloc.qti,libgralloctypes,libhidltransport,android.hardware.graphics.allocator-V2-ndk
 odm/lib64/libcamxmetadata.so
 odm/lib64/libcamxods.so
 odm/lib64/libcamxofehwl.so
@@ -1117,7 +1117,7 @@ odm/lib64/libcom.xiaomi.metadatautils.so
 odm/lib64/libcom.xiaomi.mivid.so
 odm/lib64/libcom.xiaomi.offcamadapter.so
 odm/lib64/libcom.xiaomi.offlinefeatureintf.so
-odm/lib64/libcom.xiaomi.pluginutils.so
+odm/lib64/libcom.xiaomi.pluginutils.so;DISABLE_DEPS;REQUIRED=libhidltransport,libcamera_metadata,libutilscallstack,libdmabufheap,android.hardware.graphics.allocator-V2-ndk
 odm/lib64/libcom.xiaomi.qimagebuffer.so
 odm/lib64/libcom.xiaomi.sensorpolicy.so
 odm/lib64/libcom.xiaomi.signaltrigger.so
@@ -1153,17 +1153,17 @@ odm/lib64/libmialgo_sd.so
 odm/lib64/libmialgo_sdsr.so
 odm/lib64/libmialgo_srdehaze.so
 odm/lib64/libmialgo_utils.so
-odm/lib64/libmialgoengine.so
+odm/lib64/libmialgoengine.so;DISABLE_DEPS;REQUIRED=libhidltransport,libcamera_metadata,libdmabufheap,libnativewindow,libutilscallstack,android.hardware.graphics.allocator-V2-ndk
 odm/lib64/libmialgoengine_custom.so
 odm/lib64/libmicamGlobalPool.so
 odm/lib64/libmicamera_adapter.so
-odm/lib64/libmicamera_aidl_device.so
-odm/lib64/libmicamera_aidl_device_adaptor.so
-odm/lib64/libmicamera_aidl_provider.so
-odm/lib64/libmicamera_aidl_utils.so
+odm/lib64/libmicamera_aidl_device.so;DISABLE_DEPS;REQUIRED=android.hidl.allocator@1.0,android.hidl.memory@1.0,libcamera_metadata,libexif,libgralloctypes,libmemunreachable,android.hardware.camera.device-V3-ndk,android.hardware.camera.metadata-V3-ndk,android.hardware.camera.provider-V3-ndk,android.hardware.common.fmq-V1-ndk,android.hardware.graphics.allocator-V2-ndk
+odm/lib64/libmicamera_aidl_device_adaptor.so;DISABLE_DEPS;REQUIRED=android.hidl.allocator@1.0,android.hidl.memory@1.0,libcamera_metadata,libexif,libgralloctypes,libmemunreachable,android.hardware.camera.device-V3-ndk,android.hardware.camera.metadata-V3-ndk,android.hardware.camera.provider-V3-ndk,android.hardware.common.fmq-V1-ndk,android.hardware.graphics.allocator-V2-ndk
+odm/lib64/libmicamera_aidl_provider.so;DISABLE_DEPS;REQUIRED=android.hidl.allocator@1.0,android.hidl.memory@1.0,libcamera_metadata,libexif,libgralloctypes,libtinyxml2,android.hardware.camera.device-V3-ndk,android.hardware.camera.metadata-V3-ndk,android.hardware.camera.provider-V3-ndk,android.hardware.common.fmq-V1-ndk,android.hardware.graphics.allocator-V2-ndk
+odm/lib64/libmicamera_aidl_utils.so;DISABLE_DEPS;REQUIRED=android.hidl.allocator@1.0,android.hidl.memory@1.0,libcamera_metadata,libexif,libgralloctypes,android.hardware.camera.device-V3-ndk,android.hardware.camera.metadata-V3-ndk,android.hardware.camera.provider-V3-ndk,android.hardware.common.fmq-V1-ndk,android.hardware.graphics.allocator-V2-ndk
 odm/lib64/libmicamera_fps_checker.so
-odm/lib64/libmicamera_hal_core.so
-odm/lib64/libmicamera_hal_policy.so
+odm/lib64/libmicamera_hal_core.so;DISABLE_DEPS;REQUIRED=libdmabufheap,libcamera_metadata,libexif,libjpeg,libtinyxml2,android.hardware.graphics.allocator-V2-ndk
+odm/lib64/libmicamera_hal_policy.so;DISABLE_DEPS;REQUIRED=libcamera_metadata,libgralloctypes,libexif,libjpeg,android.hardware.graphics.allocator-V2-ndk
 odm/lib64/libminikin.xiaomi.so
 odm/lib64/libmiphone_capture_bokeh.so
 odm/lib64/libmiphone_capture_depth.so
@@ -1199,14 +1199,14 @@ odm/lib64/libsupermoon.so
 odm/lib64/libubifocus.so
 odm/lib64/libwa_widelens_undistort.so
 odm/lib64/vendor.qti.hardware.camera.aon-service-impl.so
-odm/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so
+odm/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so;DISABLE_DEPS;REQUIRED=libhidltransport,libqti_vndfwk_detect,libcamera_metadata,android.hardware.graphics.common@1.2,android.hardware.graphics.mapper@2.1,libdmabufheap,libgralloccore,libgrallocutils,libmapperutils,android.hardware.graphics.common@1.1,libdisplayconfig.qti,libgralloc.qti,libgralloctypes,android.hardware.graphics.allocator-V2-ndk,vendor.qti.hardware.camera.offlinecamera-V2-ndk
 odm/lib64/vendor.xiaomi.hardware.aidlbgservice-V1-impl.so
 odm/lib64/vendor.xiaomi.hardware.aidlbgservice-V1-ndk.so
 odm/lib64/vendor.xiaomi.hardware.bgservice@1.0-impl.so
 odm/lib64/vendor.xiaomi.hardware.bgservice@1.0.so
 odm/lib64/vendor.xiaomi.hardware.camera.mivimessage-V1-impl.so
 odm/lib64/vendor.xiaomi.hardware.camera.mivimessage-V1-ndk.so
-odm/lib64/vendor.xiaomi.hardware.postprocservice-V1-impl.so
+odm/lib64/vendor.xiaomi.hardware.postprocservice-V1-impl.so;DISABLE_DEPS;REQUIRED=libgui,libnativewindow,libgralloctypes,android.hardware.graphics.allocator-V2-ndk
 odm/lib64/vendor.xiaomi.hardware.postprocservice-V1-ndk.so
 
 # DRM
@@ -1216,7 +1216,7 @@ odm/etc/vintf/manifest/misecmedia.xml
 odm/bin/hw/miaon_frame
 odm/bin/hw/misensor_camera
 odm/bin/hw/vendor.xiaomi.hardware.seaaudio-service
-odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl
+odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl;DISABLE_DEPS;REQUIRED=libprotobuf-cpp-lite-21.12-vendorcompat,libqdutils,libtinyxml2,android.hardware.graphics.allocator-V2-ndk,android.hardware.graphics.common-V7-ndk,vendor.qti.hardware.display.config-V18-ndk
 odm/bin/micrtkd
 odm/bin/misecmedia
 odm/bin/mrmd
@@ -1275,7 +1275,7 @@ odm/lib64/vendor.xiaomi.hardware.seaaudio-V1-ndk.so
 odm/lib64/vendor.xiaomi.hardware.seccam-V1-ndk.so
 
 # Fingerprint
-odm/bin/hw/mfp-daemon
+odm/bin/hw/mfp-daemon;DISABLE_DEPS;REQUIRED=android.hardware.biometrics.common.thread,android.hardware.biometrics.common.util,libstagefright_foundation,android.hardware.biometrics.fingerprint-V4-ndk
 odm/bin/hw/mifaced
 odm/etc/init/init.mfp-daemon.aidl.rc
 odm/etc/init/miface.rc
@@ -1287,7 +1287,7 @@ odm/firmware/210_FingerprintUnlock_P_RTP.bin
 odm/lib64/hw/fingerprint.goodix_us2.so
 odm/lib64/hw/fingerprint.qcom_us.so
 odm/lib64/libgf_hal.so
-odm/lib64/libmiface.so
+odm/lib64/libmiface.so;DISABLE_DEPS;REQUIRED=libcamera2ndk_vendor,libdmabufheap,libdumpstateutil,libhidltransport,libmediandk,libnativewindow,libstagefright_foundation,libutilscallstack,android.hardware.biometrics.face-V4-ndk
 odm/lib64/libqc_hal.so
 odm/lib64/libteecli.so
 
@@ -1411,8 +1411,8 @@ odm/firmware/74_ChargeWire_P_RTP.bin
 odm/firmware/75_ChargeWireless_P_RTP.bin
 
 # Keymint / security
-odm/bin/hw/android.hardware.security.keymint-service.strongbox-thales
-odm/bin/hw/android.hardware.weaver-service.thales
+odm/bin/hw/android.hardware.security.keymint-service.strongbox-thales;DISABLE_DEPS;REQUIRED=lib_android_keymaster_keymint_utils_V3,libcppbor_external,libkeymaster_portable,android.se.omapi-V1-ndk
+odm/bin/hw/android.hardware.weaver-service.thales;DISABLE_DEPS;REQUIRED=android.hardware.weaver-V2-ndk
 odm/bin/hw/vendor.xiaomi.hardware.authsecretd
 odm/bin/midevauthd
 odm/bin/mtd_keysoter
@@ -1434,12 +1434,12 @@ odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.aidl.mtkeysoter.xml
 odm/etc/vintf/manifest/mrm.xml
 odm/etc/vintf/manifest/vendor.xiaomi.hardware.aon.auth.xml
 odm/etc/vintf/manifest/vendor.xiaomi.hardware.miauthsecretd.xml
-odm/lib64/ese_weaver_thales.so
-odm/lib64/libjc_keymint-thales.so
-odm/lib64/libjc_keymint_transport-thales.so
-odm/lib64/libjc_weaver_transport.so
+odm/lib64/ese_weaver_thales.so;DISABLE_DEPS;REQUIRED=android.se.omapi-V1-ndk
+odm/lib64/libjc_keymint-thales.so;DISABLE_DEPS;REQUIRED=lib_android_keymaster_keymint_utils_V3,libcppbor_external,libkeymaster_portable,libkeymaster_messages,libsoft_attestation_cert
+odm/lib64/libjc_keymint_transport-thales.so;DISABLE_DEPS;REQUIRED=libhardware_legacy,android.se.omapi-V1-ndk
+odm/lib64/libjc_weaver_transport.so;DISABLE_DEPS;REQUIRED=android.se.omapi-V1-ndk
 odm/lib64/libmidevauth.so
-odm/lib64/libmt_keysoter.so
+odm/lib64/libmt_keysoter.so;DISABLE_DEPS;REQUIRED=android.hardware.security.keymint-V4-ndk
 odm/lib64/vendor.xiaomi.hardware.aidl.midevauth-V1-ndk.so
 odm/lib64/vendor.xiaomi.hardware.idmanager-V1-ndk.so
 odm/lib64/vendor.xiaomi.hardware.miauthsecretd-V1-ndk.so
@@ -1464,7 +1464,7 @@ odm/vendor/etc/videobox.json
 
 # Misc
 odm/bin/fidoca
-odm/bin/hw/vendor.qti.hardware.lights.service
+odm/bin/hw/vendor.qti.hardware.lights.service;DISABLE_DEPS;REQUIRED=android.hardware.light-V2-ndk
 odm/bin/hw/vendor.xiaomi.hardware.mediaeventgatherservice-service
 odm/bin/idmanager
 odm/bin/miguardca
@@ -2735,13 +2735,13 @@ odm/lib64/libtouchreport_sensor.so
 odm/etc/acdbdata/Mi/HLCNet_USB_sett7_0016_2000.eai
 
 # Vibrator
-odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service
+odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service;DISABLE_DEPS;REQUIRED=libtinyalsa,libpalclient,android.hardware.vibrator-V2-ndk
 odm/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc
 odm/etc/permissions/vendor.hardware.vibratorfeature-permission.xml
 odm/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml
 odm/lib64/libaachaptics.so
 odm/lib64/libagmdevice.so
-odm/lib64/vendor.hardware.vibratorCL.impl.so
+odm/lib64/vendor.hardware.vibratorCL.impl.so;DISABLE_DEPS;REQUIRED=libpalclient,android.hardware.vibrator-V2-ndk
 
 # DSP skeletons and AI models: found through the stock vendor -> odm symlinks
 # (loaded by the DSP or by path, so not visible to dependency tracing)
