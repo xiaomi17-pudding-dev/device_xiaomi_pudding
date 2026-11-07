@@ -703,11 +703,11 @@ odm/firmware/CAMERA_ICP_1.elf
 odm/firmware/CAMERA_ICP_1.mbn
 odm/firmware/CAMERA_ICP_1.mdt
 odm/firmware/CAMERA_ICP_170.elf
-odm/lib64/camera/aon_front_i_1.pb
-odm/lib64/camera/aon_front_ii_1.pb
-odm/lib64/camera/aon_rear_i_2.pb
-odm/lib64/camera/aon_rear_ii_2.pb
-odm/lib64/camera/bitmlconfig.bin
+odm/lib64/camera/aon_front_i_1.pb;SYMLINK=vendor/lib64/camera/aon_front_i_1.pb
+odm/lib64/camera/aon_front_ii_1.pb;SYMLINK=vendor/lib64/camera/aon_front_ii_1.pb
+odm/lib64/camera/aon_rear_i_2.pb;SYMLINK=vendor/lib64/camera/aon_rear_i_2.pb
+odm/lib64/camera/aon_rear_ii_2.pb;SYMLINK=vendor/lib64/camera/aon_rear_ii_2.pb
+odm/lib64/camera/bitmlconfig.bin;SYMLINK=vendor/lib64/camera/bitmlconfig.bin
 odm/lib64/camera/camxfl115indices.bin
 odm/lib64/camera/camxfl300v1indices.bin
 odm/lib64/camera/camxfl300v2indices.bin
@@ -728,8 +728,8 @@ odm/lib64/camera/com.qti.eeprom.pudding_ofilm_s5kjn5_p24u128b_tele_ii_eeprom.so
 odm/lib64/camera/com.qti.eeprom.pudding_sunny_ov50m_fm24ln128i3_front_i_eeprom.so
 odm/lib64/camera/com.qti.eeprom.pudding_sunny_ovx9500_fm24ln128i3_wide_i_eeprom.so
 odm/lib64/camera/com.qti.eeprom.pudding_sunny_s5kjn5_fm24ln128i3_tele_i_eeprom.so
-odm/lib64/camera/com.qti.ofe.profiledb.default.bin
-odm/lib64/camera/com.qti.ofe.profiledb.sm8850.bin
+odm/lib64/camera/com.qti.ofe.profiledb.default.bin;SYMLINK=vendor/lib64/camera/com.qti.ofe.profiledb.default.bin
+odm/lib64/camera/com.qti.ofe.profiledb.sm8850.bin;SYMLINK=vendor/lib64/camera/com.qti.ofe.profiledb.sm8850.bin
 odm/lib64/camera/com.qti.ois.pudding_ofilm_s5kjn5_bu24619_tele_ii_ois.so
 odm/lib64/camera/com.qti.ois.pudding_sunny_s5kjn5_bu24619_tele_i_ois.so
 odm/lib64/camera/com.qti.sensor.pudding_aac_ov50m_ultra_ii.so
@@ -963,7 +963,7 @@ odm/lib64/camera/preloadplugins/com.xiaomi.plugin.offlineyuvreprocess.so
 odm/lib64/camera/preloadplugins/com.xiaomi.plugin.offlineyuvsplit.so
 odm/lib64/camera/preloadplugins/com.xiaomi.plugin.offlineyuvwarp.so
 odm/lib64/camera/preloadplugins/com.xiaomi.plugin.previewldc.so
-odm/lib64/camera/qfdserviceconfig.bin
+odm/lib64/camera/qfdserviceconfig.bin;SYMLINK=vendor/lib64/camera/qfdserviceconfig.bin
 odm/lib64/camera/zsl/com.xiaomi.zsl.ainr.so
 odm/lib64/camera/zsl/com.xiaomi.zsl.bokehsmartae.so
 odm/lib64/camera/zsl/com.xiaomi.zsl.default.so
@@ -1016,11 +1016,11 @@ odm/lib64/com.xiaomi.stubv1.camx.so
 odm/lib64/com.xiaomi.stubv1.chi.so
 odm/lib64/com.xiaomi.xmdevprotection.tokmd.so
 odm/lib64/com.xiaomi.xmxmessage2center.so
-odm/lib64/hw/camera.qcom.core.so
+odm/lib64/hw/camera.qcom.core.so;SYMLINK=vendor/lib64/hw/camera.qcom.core.so
 odm/lib64/hw/camera.qcom.sm8850.so
-odm/lib64/hw/camera.qcom.so
+odm/lib64/hw/camera.qcom.so;SYMLINK=vendor/lib64/hw/camera.qcom.so
 odm/lib64/hw/com.qti.chi.offline.so
-odm/lib64/hw/com.qti.chi.override.so
+odm/lib64/hw/com.qti.chi.override.so;SYMLINK=vendor/lib64/hw/com.qti.chi.override.so
 odm/lib64/immunesystem.db.sqlite3.so
 odm/lib64/libAF.so
 odm/lib64/libAncHumanPreviewBokeh.so
@@ -1042,7 +1042,7 @@ odm/lib64/libQnnHtp.so
 odm/lib64/libQnnHtpPrepare.so
 odm/lib64/libQnnSaver.so
 odm/lib64/libQnnSystem.so
-odm/lib64/libSNPE.so
+odm/lib64/libSNPE.so;SYMLINK=vendor/lib64/libSNPE.so
 odm/lib64/libabnormal_img_dectect.so
 odm/lib64/libaiassistae.so
 odm/lib64/libaispalgoprocessor.so
@@ -1080,7 +1080,7 @@ odm/lib64/libcamxcoreutils.so
 odm/lib64/libcamxcsl.so
 odm/lib64/libcamxcslhw.so
 odm/lib64/libcamxdumpinforecorder.so
-odm/lib64/libcamxexternalformatutils.so
+odm/lib64/libcamxexternalformatutils.so;SYMLINK=vendor/lib64/libcamxexternalformatutils.so
 odm/lib64/libcamxfdengine.so
 odm/lib64/libcamxhexlpservicebase.so
 odm/lib64/libcamxhwlfrontend.so
@@ -2740,3 +2740,12 @@ odm/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml
 odm/lib64/libaachaptics.so
 odm/lib64/libagmdevice.so
 odm/lib64/vendor.hardware.vibratorCL.impl.so
+
+# DSP skeletons and AI models: found through the stock vendor -> odm symlinks
+# (loaded by the DSP or by path, so not visible to dependency tracing)
+odm/lib/rfsa/adsp/libSnpeHtpV81Skel.so;SYMLINK=vendor/lib/rfsa/adsp/libSnpeHtpV81Skel.so
+odm/lib64/qsn1nrt430.bin;SYMLINK=vendor/lib64/qsn1nrt430.bin
+odm/lib64/qsn1nrt43270.bin;SYMLINK=vendor/lib64/qsn1nrt43270.bin
+odm/lib64/qsn2all.bin;SYMLINK=vendor/lib64/qsn2all.bin
+odm/lib64/qsn3all.bin;SYMLINK=vendor/lib64/qsn3all.bin
+odm/lib64/rfs/dsp/libqsegnetengine_dsp_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libqsegnetengine_dsp_skel.so
