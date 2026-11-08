@@ -31,6 +31,14 @@ namespace_imports = [
 # Stock blobs link older versions of stable AIDL interfaces than LineageOS
 # builds; point them at the newest frozen version instead of shipping both.
 blob_fixups: blob_fixups_user_type = {
+    # Stock XML declaration is malformed ("<?xml=version"), which the build's xmllint check rejects
+    (
+        'odm/etc/camera/snsc_bokeh_motiontuning.xml',
+        'odm/etc/camera/snsc_enhance_motiontuning.xml',
+        'odm/etc/camera/snsc_motiontuning.xml',
+        'odm/etc/camera/snsc_noface_motiontuning.xml',
+    ): blob_fixup()
+        .regex_replace(r'<\?xml=version=', '<?xml version='),
     (
         'odm/bin/hw/vendor.qti.camera.provider-service_64',
         'odm/lib64/camera/components/com.mi.node.fd.so',
