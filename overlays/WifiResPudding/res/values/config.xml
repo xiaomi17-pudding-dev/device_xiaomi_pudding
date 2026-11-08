@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From stock AospWifiResOverlay.apk (HyperOS OS3.0.335.0.XPCEUXM) -->
+    <string-array name="config_wifiCharsetsForSsidTranslation">
+        <item>all,GBK</item>
+    </string-array>
+    <integer-array name="config_wifiDisconnectedScanIntervalScheduleSec">
+        <item>20</item>
+    </integer-array>
+    <item name="config_showConfirmationDialogForThirdPartyAppsEnablingWifi" type="bool">false</item>
+    <item name="config_wifiAllowInsecureEnterpriseConfigurationsForSettingsAndSUW" type="bool">true</item>
+    <item name="config_wifiDisableUnwantedNetworkOnLowRssi" type="bool">true</item>
+    <item name="config_wifiEnableApfOnNonPrimarySta" type="bool">true</item>
+    <item name="config_wifiEnableLinkedNetworkRoaming" type="bool">true</item>
+    <item name="config_wifiMultiStaLocalOnlyConcurrencyEnabled" type="bool">false</item>
+    <item name="config_wifiMultiStaMultiInternetConcurrencyEnabled" type="bool">true</item>
+    <item name="config_wifiMultiStaNetworkSwitchingMakeBeforeBreakEnabled" type="bool">false</item>
+    <item name="config_wifiMultiStaRestrictedConcurrencyEnabled" type="bool">false</item>
+    <item name="config_wifiP2pGoIpAddressAllocationInEapolFrames" type="bool">true</item>
+    <item name="config_wifiSaeH2eSupported" type="bool">true</item>
+    <item name="config_wifiSaeUpgradeOffloadEnabled" type="bool">true</item>
+    <item name="config_wifiSoftapAutoAppendLowerBandsToBandConfigurationEnabled" type="bool">true</item>
+    <item name="config_wifiSoftapIeee80211axSupported" type="bool">true</item>
+    <item name="config_wifiSoftapIeee80211beSupported" type="bool">false</item>
+    <item name="config_wifiTwtSupported" type="bool">false</item>
+    <item name="config_wifi_connected_mac_randomization_supported" type="bool">true</item>
+    <item name="config_wifi_only_link_same_credential_configurations" type="bool">true</item>
+    <item name="config_wifi_softap_ieee80211ac_supported" type="bool">true</item>
+    <item name="config_wifi_softap_sae_supported" type="bool">true</item>
+    <item name="config_disconnectedP2pIfaceLowPriorityTimeoutMs" type="integer">0</item>
+    <item name="config_wifiDisableReasonAssociationRejectionThreshold" type="integer">5</item>
+    <item name="config_wifiDisableReasonAuthenticationFailureThreshold" type="integer">5</item>
+    <item name="config_wifiMaxNumWifiConfigurations" type="integer">1000</item>
+    <item name="config_wifiPnoScanIntervalMultiplier" type="integer">6</item>
+    <string name="config_wifi_tcp_buffers" translatable="false">524288,1048576,16777216,262144,524288,16777216</string>
+</resources>

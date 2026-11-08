@@ -9,6 +9,11 @@ $(call inherit-product, device/xiaomi/sm8850-common/common.mk)
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/pudding/pudding-vendor.mk)
 
+# Overlays
+PRODUCT_PACKAGES += \
+    FrameworksResPudding \
+    WifiResPudding
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
