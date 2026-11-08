@@ -56,7 +56,7 @@ odm/vendor/etc/dolby_vision.cfg
 odm/vendor/persist/display/dolby_vision.cfg
 
 # Camera
-odm/bin/hw/vendor.qti.camera.provider-service_64;DISABLE_DEPS;REQUIRED=libexif,libgralloctypes,android.hardware.graphics.mapper@2.0,android.hardware.graphics.mapper@3.0,android.hardware.graphics.mapper@4.0,libcamera_metadata,android.hidl.allocator@1.0,android.hidl.memory@1.0,libtinyxml2,libutilscallstack,android.hardware.camera.device-V3-ndk,android.hardware.camera.metadata-V3-ndk,android.hardware.camera.provider-V3-ndk,android.hardware.common.fmq-V1-ndk
+odm/bin/hw/vendor.qti.camera.provider-service_64;DISABLE_DEPS;REQUIRED=libexif,libgralloctypes,android.hardware.graphics.mapper@2.0,android.hardware.graphics.mapper@3.0,android.hardware.graphics.mapper@4.0,libcamera_metadata,android.hidl.allocator@1.0,android.hidl.memory@1.0,libutilscallstack,android.hardware.camera.device-V3-ndk,android.hardware.camera.metadata-V3-ndk,android.hardware.camera.provider-V3-ndk,android.hardware.common.fmq-V1-ndk,libtinyxml2-v36
 odm/etc/camera/AIGesture/buling_1s.png
 odm/etc/camera/AIGesture/buling_2s.png
 odm/etc/camera/AIGesture/buling_3s.png
@@ -1159,10 +1159,10 @@ odm/lib64/libmicamGlobalPool.so
 odm/lib64/libmicamera_adapter.so
 odm/lib64/libmicamera_aidl_device.so;DISABLE_DEPS;REQUIRED=android.hidl.allocator@1.0,android.hidl.memory@1.0,libcamera_metadata,libexif,libgralloctypes,libmemunreachable,android.hardware.camera.device-V3-ndk,android.hardware.camera.metadata-V3-ndk,android.hardware.camera.provider-V3-ndk,android.hardware.common.fmq-V1-ndk,android.hardware.graphics.allocator-V2-ndk
 odm/lib64/libmicamera_aidl_device_adaptor.so;DISABLE_DEPS;REQUIRED=android.hidl.allocator@1.0,android.hidl.memory@1.0,libcamera_metadata,libexif,libgralloctypes,libmemunreachable,android.hardware.camera.device-V3-ndk,android.hardware.camera.metadata-V3-ndk,android.hardware.camera.provider-V3-ndk,android.hardware.common.fmq-V1-ndk,android.hardware.graphics.allocator-V2-ndk
-odm/lib64/libmicamera_aidl_provider.so;DISABLE_DEPS;REQUIRED=android.hidl.allocator@1.0,android.hidl.memory@1.0,libcamera_metadata,libexif,libgralloctypes,libtinyxml2,android.hardware.camera.device-V3-ndk,android.hardware.camera.metadata-V3-ndk,android.hardware.camera.provider-V3-ndk,android.hardware.common.fmq-V1-ndk,android.hardware.graphics.allocator-V2-ndk
+odm/lib64/libmicamera_aidl_provider.so;DISABLE_DEPS;REQUIRED=android.hidl.allocator@1.0,android.hidl.memory@1.0,libcamera_metadata,libexif,libgralloctypes,android.hardware.camera.device-V3-ndk,android.hardware.camera.metadata-V3-ndk,android.hardware.camera.provider-V3-ndk,android.hardware.common.fmq-V1-ndk,android.hardware.graphics.allocator-V2-ndk,libtinyxml2-v36
 odm/lib64/libmicamera_aidl_utils.so;DISABLE_DEPS;REQUIRED=android.hidl.allocator@1.0,android.hidl.memory@1.0,libcamera_metadata,libexif,libgralloctypes,android.hardware.camera.device-V3-ndk,android.hardware.camera.metadata-V3-ndk,android.hardware.camera.provider-V3-ndk,android.hardware.common.fmq-V1-ndk,android.hardware.graphics.allocator-V2-ndk
 odm/lib64/libmicamera_fps_checker.so
-odm/lib64/libmicamera_hal_core.so;DISABLE_DEPS;REQUIRED=libdmabufheap,libcamera_metadata,libexif,libjpeg,libtinyxml2,android.hardware.graphics.allocator-V2-ndk
+odm/lib64/libmicamera_hal_core.so;DISABLE_DEPS;REQUIRED=libdmabufheap,libcamera_metadata,libexif,libjpeg,android.hardware.graphics.allocator-V2-ndk,libtinyxml2-v36
 odm/lib64/libmicamera_hal_policy.so;DISABLE_DEPS;REQUIRED=libcamera_metadata,libgralloctypes,libexif,libjpeg,android.hardware.graphics.allocator-V2-ndk
 odm/lib64/libminikin.xiaomi.so
 odm/lib64/libmiphone_capture_bokeh.so
@@ -1216,7 +1216,7 @@ odm/etc/vintf/manifest/misecmedia.xml
 odm/bin/hw/miaon_frame
 odm/bin/hw/misensor_camera
 odm/bin/hw/vendor.xiaomi.hardware.seaaudio-service
-odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl;DISABLE_DEPS;REQUIRED=libprotobuf-cpp-lite-21.12-vendorcompat,libqdutils,libtinyxml2,android.hardware.graphics.allocator-V2-ndk,android.hardware.graphics.common-V7-ndk,vendor.qti.hardware.display.config-V18-ndk
+odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl;DISABLE_DEPS;REQUIRED=libprotobuf-cpp-lite-21.12-vendorcompat,libqdutils,android.hardware.graphics.allocator-V2-ndk,android.hardware.graphics.common-V7-ndk,vendor.qti.hardware.display.config-V18-ndk,libtinyxml2-v36
 odm/bin/micrtkd
 odm/bin/misecmedia
 odm/bin/mrmd
