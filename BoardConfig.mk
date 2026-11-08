@@ -22,7 +22,6 @@ TARGET_OTA_ASSERT_DEVICE := pudding
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
-TARGET_ODM_DLKM_PROP += $(DEVICE_PATH)/odm_dlkm.prop
 
 # Inherit the proprietary files
 include vendor/xiaomi/pudding/BoardConfigVendor.mk
