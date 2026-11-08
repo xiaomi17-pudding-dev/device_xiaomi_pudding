@@ -11,6 +11,9 @@ KERNEL_PREBUILT_DIR := device/xiaomi/pudding-kernel
 # Inherit from sm8850-common
 include device/xiaomi/sm8850-common/BoardConfigCommon.mk
 
+# Filesystem
+TARGET_FS_CONFIG_GEN += $(DEVICE_PATH)/config.fs
+
 # Display
 TARGET_SCREEN_DENSITY := 520
 
