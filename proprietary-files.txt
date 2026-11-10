@@ -33,10 +33,6 @@ odm/etc/audio/top_spk.wav
 odm/etc/audio/top_spk_hp.wav
 odm/etc/audio-test-config
 odm/etc/audio_pef_sched.xml
-odm/etc/audio_policy_engine_configuration_mi.xml
-odm/etc/audio_policy_engine_default_stream_volumes_mi.xml
-odm/etc/audio_policy_engine_product_strategies_mi.xml
-odm/etc/audio_policy_engine_stream_volumes_mi.xml
 odm/etc/camera/xiaomi/watermark/ic_wp_the_palace_museum.webp
 odm/etc/camera/xiaomi/watermark/ic_wp_the_potala_palace.webp
 odm/etc/camera/xiaomi/watermark/ic_wp_the_summer_palace.webp
