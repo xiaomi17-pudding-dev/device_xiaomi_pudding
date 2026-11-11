@@ -23,6 +23,7 @@ PRODUCT_PACKAGES += \
     FrameworksResPudding \
     PuddingEuiccOverlay \
     SettingsProviderResPudding \
+    SettingsResPudding \
     SystemUIResPudding \
     WifiResPudding
 

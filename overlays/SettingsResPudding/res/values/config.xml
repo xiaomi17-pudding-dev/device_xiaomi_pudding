@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- The Xiaomi face HAL opens the front camera itself and renders the enrollment preview
+         into the surface Settings passes; Settings must not open the camera too -->
+    <bool name="config_face_enroll_hal_owns_camera">true</bool>
+</resources>

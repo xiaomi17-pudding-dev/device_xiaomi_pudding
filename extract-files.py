@@ -4,7 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from extract_utils.file import File
 from extract_utils.fixups_blob import (
+    BlobFixupCtx,
     blob_fixup,
     blob_fixups_user_type,
 )
@@ -30,6 +32,35 @@ namespace_imports = [
 
 # Stock blobs link older versions of stable AIDL interfaces than LineageOS
 # builds; point them at the newest frozen version instead of shipping both.
+
+def blob_fixup_miface_weak_nonsecure(
+    ctx: BlobFixupCtx,
+    file: File,
+    file_path: str,
+    *args,
+    **kwargs,
+):
+    # The face HAL uses Xiaomi's secure camera path and reports STRONG strength, which the
+    # AOSP face framework cannot serve: enroll and authenticate use the regular camera (the
+    # secure camera flag is read as 0) and getSensorProps reports WEAK.
+    patches = [
+        # enroll_impl: ldrb w26, [x10, #0x59] -> mov w26, wzr
+        (0x4C100, '5a654139', 'fa031f2a'),
+        # authenticate_impl: ldrb w19, [x9, #0x59] -> mov w19, wzr
+        (0x4C818, '33654139', 'f3031f2a'),
+        # getSensorProps: ldrb w10, [sp, #4] (sensorStrength) -> mov w10, #1 (WEAK)
+        (0x75F44, 'ea134039', '2a008052'),
+    ]
+    with open(file_path, 'rb+') as f:
+        data = bytearray(f.read())
+        for offset, old, new in patches:
+            if data[offset : offset + 4] != bytes.fromhex(old):
+                raise ValueError(f'{file_path}: unexpected code at {offset:#x}')
+            data[offset : offset + 4] = bytes.fromhex(new)
+        f.seek(0)
+        f.write(data)
+
+
 blob_fixups: blob_fixups_user_type = {
     # Xiaomi's MultiRoute port (output flag VIRTUAL_DEEP_BUFFER) and its Bluetooth codec
     # audio/vnd.mi.mihc are only known to HyperOS's audio framework: the AIDL module config
@@ -94,6 +125,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
     'odm/lib64/camx.device-impl.so': blob_fixup()
         .replace_needed('vendor.qti.hardware.display.config-V2-ndk.so', 'vendor.qti.hardware.display.config-V18-ndk.so'),
+    'odm/lib64/libmiface.so': blob_fixup()
+        .call(blob_fixup_miface_weak_nonsecure),
     # libkeymint and libkeymint_remote_prov_support are linked but none of their symbols is used
     'odm/lib64/libmt_keysoter.so': blob_fixup()
         .remove_needed('libkeymint.so')
