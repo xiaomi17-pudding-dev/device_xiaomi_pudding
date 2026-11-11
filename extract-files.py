@@ -31,6 +31,16 @@ namespace_imports = [
 # Stock blobs link older versions of stable AIDL interfaces than LineageOS
 # builds; point them at the newest frozen version instead of shipping both.
 blob_fixups: blob_fixups_user_type = {
+    # Xiaomi's MultiRoute port (output flag VIRTUAL_DEEP_BUFFER) and its Bluetooth codec
+    # audio/vnd.mi.mihc are only known to HyperOS's audio framework: the AIDL module config
+    # then fails to convert (BAD_VALUE), audioserver finds no primary output and has no
+    # audio at all. Remove the MultiRoute mix port, device port and routes, and the codec.
+    'odm/etc/audio/audio_module_config_primary.xml': blob_fixup()
+        .regex_replace(r'(?s)\n[ \t]*<!-- MIUI ADD: Audio_MultiRoute -->\n[ \t]*<mixPort name="virtual_deep_buffer".*?<!-- END Audio_MultiRoute -->', '')
+        .regex_replace(r'(?s)\n[ \t]*<!-- MIUI ADD: Audio_MultiRoute -->\n[ \t]*<devicePort tagName="Multiroute".*?<!-- END Audio_MultiRoute -->', '')
+        .regex_replace(r'\n[ \t]*<route type="mix" sink="Multiroute"\s+sources="virtual_deep_buffer"/>', '')
+        .regex_replace(r',virtual_deep_buffer', '')
+        .regex_replace(r' audio/vnd\.mi\.mihc', ''),
     # Stock XML declaration is malformed ("<?xml=version"), which the build's xmllint check rejects
     (
         'odm/etc/camera/snsc_bokeh_motiontuning.xml',
