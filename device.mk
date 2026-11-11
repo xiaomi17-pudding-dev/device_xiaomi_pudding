@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResPudding \
+    SystemUIResPudding \
     WifiResPudding
 
 # Soong namespaces

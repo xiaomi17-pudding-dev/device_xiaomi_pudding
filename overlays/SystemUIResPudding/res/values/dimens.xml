@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- the padding on the top of the statusbar (usually 0) -->
+    <dimen name="status_bar_padding_top">16px</dimen>
+
+    <!-- the padding on the start of the statusbar: with rounded_corner_content_padding this
+         puts the clock 115 px from the edge, the same as in the shade header -->
+    <dimen name="status_bar_padding_start">1px</dimen>
+
+    <!-- the padding on the end of the statusbar: battery 115 px from the edge -->
+    <dimen name="status_bar_padding_end">0px</dimen>
+
+    <!-- Height of the status bar header bar when on Keyguard -->
+    <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height</dimen>
+
+    <!-- Adjust the icon padding in status bar for rounded corners. -->
+    <dimen name="rounded_corner_content_padding">100.0px</dimen>
+
+    <!-- The width/height of the unlock icon view on keyguard. -->
+    <dimen name="keyguard_indication_margin_bottom">15dp</dimen>
+
+    <!-- Microns/ums (1000 um = 1mm) per pixel for the given device. If unspecified, UI that
+         relies on this value will not be sized correctly. -->
+    <item format="float" name="pixel_pitch" type="dimen">50.0</item>
+    <!-- Shade header: centre the clock and icons on the camera hole (about 83 px from the
+         top) as well; the extra height is taken from the margin above the quick settings,
+         so the tiles stay in place. -->
+    <dimen name="qs_header_height">166px</dimen>
+    <dimen name="qs_header_row_min_height">166px</dimen>
+    <dimen name="qqs_layout_margin_top">36px</dimen>
+    <!-- Shade header: move the system icons in from the edge so the battery ends 115 px from
+         the screen edge, mirroring the clock on the left. -->
+    <dimen name="hover_system_icons_container_padding_end">13px</dimen>
+</resources>
