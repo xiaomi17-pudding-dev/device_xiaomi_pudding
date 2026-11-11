@@ -2791,6 +2791,7 @@ odm/firmware/vpu40_2v_v1_unsigned.mbn
 odm/firmware/water_check.tflite
 odm/firmware/water_check_1.tflite
 odm/firmware_oemvm/oemvm/boot/oemvm.elf
+odm/firmware_oemvm/oemvm/oemvm.dtbo
 odm/firmware_qtvm/system.img
 odm/lib/rfsa/adsp/libCalculator_skel.so
 odm/lib/rfsa/adsp/libQnnHexagonSkel_dspApp.so
