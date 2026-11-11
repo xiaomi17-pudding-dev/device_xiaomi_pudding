@@ -1,0 +1,4 @@
+# Device name as on stock (ro.product.odm.marketname); Bluetooth otherwise shows the
+# model number
+bluetooth.device.default_name=Xiaomi 17 (pudding)
+ro.product.marketname=Xiaomi 17
