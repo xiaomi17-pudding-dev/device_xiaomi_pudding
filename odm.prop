@@ -185,6 +185,12 @@ vendor.display.support_builtin_high_fps_when_pluggable_connected=0
 vendor.display.support_function_timer=1
 vendor.display.use_layer_ext=0
 
+# Fingerprint (hardware/xiaomi service): ultrasonic under-display sensor; centre and radius
+# in panel pixels (1220x2656) from the stock persist.vendor.sys.fp.fod.location.X_Y and
+# persist.vendor.sys.fp.fod.size.width_height
+persist.vendor.fingerprint.sensor_location=610|1971|82
+persist.vendor.fingerprint.type=udfps
+
 # Radio
 persist.vendor.radio.cdc.hyper_aidl=true
 persist.vendor.radio.dynamic_sar=1

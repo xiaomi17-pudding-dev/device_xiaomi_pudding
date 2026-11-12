@@ -1,0 +1,19 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "init.fingerprint.pudding.rc",
+    src: "init.fingerprint.pudding.rc",
+    sub_dir: "init",
+    device_specific: true,
+}
+
+// The stock Qualcomm fingerprint HAL module registers these services in the fingerprint
+// service process (the Qualcomm extension and a fallback fx.tunnel service)
+vintf_fragment {
+    name: "vendor.qti.hardware.fingerprint.pudding.xml",
+    src: "vendor.qti.hardware.fingerprint.pudding.xml",
+    device_specific: true,
+}

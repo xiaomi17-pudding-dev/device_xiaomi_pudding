@@ -14,6 +14,11 @@ $(call inherit-product, vendor/xiaomi/pudding/pudding-vendor.mk)
 PRODUCT_COPY_FILES += \
     device/xiaomi/pudding-kernel/kernel:kernel
 
+# Fingerprint: device nodes and the module's extension interface
+PRODUCT_PACKAGES += \
+    init.fingerprint.pudding.rc \
+    vendor.qti.hardware.fingerprint.pudding.xml
+
 # KeyMint: the Thales StrongBox KeyMint (odm) implements KeyMint V3
 PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V3-ndk

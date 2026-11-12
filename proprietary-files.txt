@@ -1507,17 +1507,15 @@ odm/lib64/vendor.xiaomi.hardware.seaaudio-V1-ndk.so
 odm/lib64/vendor.xiaomi.hardware.seccam-V1-ndk.so
 
 # Fingerprint
-odm/bin/hw/mfp-daemon;DISABLE_DEPS;REQUIRED=android.hardware.biometrics.common.thread,android.hardware.biometrics.common.util,libstagefright_foundation,android.hardware.biometrics.fingerprint-V4-ndk
 odm/bin/hw/mifaced
-odm/etc/init/init.mfp-daemon.aidl.rc
 odm/etc/init/miface.rc
-odm/etc/vintf/manifest/AHBF-V3-service.xml
 odm/etc/vintf/manifest/android.hardware.biometrics.face-v4.xml
-odm/etc/vintf/manifest/fod-aidl.xml
 odm/firmware/168_fingerprintRecord_P_RTP.bin
 odm/firmware/210_FingerprintUnlock_P_RTP.bin
 odm/lib64/hw/fingerprint.goodix_us2.so
-odm/lib64/hw/fingerprint.qcom_us.so
+# Loaded by the hardware/xiaomi fingerprint service through libhardware, which looks for
+# fingerprint.<module>.default.so
+odm/lib64/hw/fingerprint.qcom_us.so:odm/lib64/hw/fingerprint.qcom_us.default.so;FIX_SONAME
 odm/lib64/libgf_hal.so
 odm/lib64/libmiface.so;DISABLE_DEPS;REQUIRED=libcamera2ndk_vendor,libdmabufheap,libdumpstateutil,libhidltransport,libmediandk,libnativewindow,libstagefright_foundation,libutilscallstack,android.hardware.biometrics.face-V4-ndk
 odm/lib64/libqc_hal.so
