@@ -14,6 +14,9 @@ $(call inherit-product, vendor/xiaomi/pudding/pudding-vendor.mk)
 PRODUCT_COPY_FILES += \
     device/xiaomi/pudding-kernel/kernel:kernel
 
+# Camera: the MIUI camera (device/xiaomi/miuicamera-pudding) replaces the AOSP camera apps
+$(call inherit-product-if-exists, device/xiaomi/miuicamera-pudding/miuicamera.mk)
+
 # Fingerprint: device nodes and the module's extension interface
 PRODUCT_PACKAGES += \
     init.fingerprint.pudding.rc \
