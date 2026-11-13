@@ -1505,6 +1505,8 @@ odm/lib64/vendor.xiaomi.hardware.mitruedevice-V1-ndk.so
 odm/lib64/vendor.xiaomi.hardware.mrm-V1-ndk.so
 odm/lib64/vendor.xiaomi.hardware.seaaudio-V1-ndk.so
 odm/lib64/vendor.xiaomi.hardware.seccam-V1-ndk.so
+product/etc/displayconfig/display_id_4630946555188253075.xml:vendor/etc/displayconfig/display_id_4630946555188253075.xml
+product/etc/displayconfig/display_id_4630947230830355603.xml:vendor/etc/displayconfig/display_id_4630947230830355603.xml
 
 # Fingerprint
 odm/bin/hw/mifaced
