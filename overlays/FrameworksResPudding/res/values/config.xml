@@ -69,6 +69,11 @@
     <!-- SystemUI doze, which listens to the UDFPS sensor while the screen is off -->
     <string name="config_dozeComponent" translatable="false">com.android.systemui/com.android.systemui.doze.DozeService</string>
 
+    <!-- Always-on display: available, off by default -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+    <bool name="config_dozeAlwaysOnEnabled">false</bool>
+    <integer name="config_screenBrightnessDoze">17</integer>
+
     <!-- Fingerprint unlock with the screen off: the touch controller keeps detecting a
          finger on the sensor, reported by the Xiaomi UDFPS sensor -->
     <bool name="config_screen_off_udfps_enabled">true</bool>

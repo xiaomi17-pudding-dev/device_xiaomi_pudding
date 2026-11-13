@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Doze: the display supports its low-power doze state (always-on display) -->
+    <bool name="doze_display_state_supported">true</bool>
+
+    <!-- Doze: the Xiaomi AOD sensor reports the ambient light while the display dozes -->
+    <string name="doze_brightness_sensor_type" translatable="false">xiaomi.sensor.aod</string>
+
+    <!-- Doze: AOD sensor values to brightness; -1 keeps the current brightness -->
+    <integer-array name="config_doze_brightness_sensor_to_brightness">
+        <item>-1</item> <!-- 0: not used -->
+        <item>-1</item> <!-- 1: not used -->
+        <item>-1</item> <!-- 2: not used -->
+        <item>1</item>  <!-- 3: very dark -->
+        <item>18</item> <!-- 4: bright -->
+        <item>2</item>  <!-- 5: dark -->
+    </integer-array>
+
+    <!-- Doze: AOD sensor values to the opacity of the black scrim; -1 keeps the current one -->
+    <integer-array name="config_doze_brightness_sensor_to_scrim_opacity">
+        <item>-1</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
+</resources>
