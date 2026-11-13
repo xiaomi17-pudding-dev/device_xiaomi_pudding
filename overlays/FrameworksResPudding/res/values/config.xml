@@ -56,6 +56,13 @@
         <item>2000</item>
         <item>4000</item>
     </integer-array>
+    <!-- IMS: VoLTE, video calling and Wi-Fi calling, as in the stock
+         FrameworksResCommon_Sys.apk -->
+    <bool name="config_carrier_volte_available">true</bool>
+    <bool name="config_device_volte_available">true</bool>
+    <bool name="config_device_vt_available">true</bool>
+    <bool name="config_device_wfc_ims_available">true</bool>
+
     <!-- Double tap to wake: the power HAL switches it in the touch controller -->
     <bool name="config_supportDoubleTapWake">true</bool>
 
