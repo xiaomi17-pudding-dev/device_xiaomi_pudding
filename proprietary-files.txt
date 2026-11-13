@@ -1508,6 +1508,12 @@ odm/lib64/vendor.xiaomi.hardware.seccam-V1-ndk.so
 product/etc/displayconfig/display_id_4630946555188253075.xml:vendor/etc/displayconfig/display_id_4630946555188253075.xml
 product/etc/displayconfig/display_id_4630947230830355603.xml:vendor/etc/displayconfig/display_id_4630947230830355603.xml
 
+# eSIM: Google's eSIM manager (LPA) from the stock mi_ext partition. The APK is extracted
+# only: the EuiccGoogle module in Android.bp installs it on products with Google apps.
+mi_ext/product/etc/default-permissions/EuiccGoogle-default-permissions-google.xml:product/etc/default-permissions/EuiccGoogle-default-permissions-google.xml
+mi_ext/product/etc/permissions/EuiccGoogle-permissions.xml:product/etc/permissions/EuiccGoogle-permissions.xml
+mi_ext/product/priv-app/EuiccGoogle/EuiccGoogle.apk:product/priv-app/EuiccGoogle/EuiccGoogle.apk;EXTRACT_ONLY;FILEGROUP=EuiccGoogle_apk
+
 # Fingerprint
 odm/bin/hw/mifaced
 odm/etc/init/miface.rc

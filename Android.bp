@@ -4,4 +4,19 @@
 //
 
 soong_namespace {
+    imports: ["vendor/xiaomi/pudding"],
+}
+
+// Google's eSIM manager (LPA) from the stock firmware. It needs Google apps, so only
+// products that ship them add it to PRODUCT_PACKAGES.
+android_app_import {
+    name: "EuiccGoogle",
+    apk: ":EuiccGoogle_apk",
+    presigned: true,
+    preprocessed: true,
+    privileged: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
 }
