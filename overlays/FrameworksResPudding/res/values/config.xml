@@ -56,6 +56,17 @@
         <item>2000</item>
         <item>4000</item>
     </integer-array>
+    <!-- Double tap to wake: the power HAL switches it in the touch controller -->
+    <bool name="config_supportDoubleTapWake">true</bool>
+
+    <!-- SystemUI doze, which listens to the UDFPS sensor while the screen is off -->
+    <string name="config_dozeComponent" translatable="false">com.android.systemui/com.android.systemui.doze.DozeService</string>
+
+    <!-- Fingerprint unlock with the screen off: the touch controller keeps detecting a
+         finger on the sensor, reported by the Xiaomi UDFPS sensor -->
+    <bool name="config_screen_off_udfps_enabled">true</bool>
+    <string name="config_dozeUdfpsLongPressSensorType" translatable="false">org.lineageos.sensor.udfps</string>
+
     <!-- Stock enables automatic brightness (FrameworksResCommon_Sys.apk) -->
     <bool name="config_automatic_brightness_available">true</bool>
 
