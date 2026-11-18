@@ -19,6 +19,16 @@ $(call inherit-product, device/xiaomi/pudding/device.mk)
 # Inherit some common Neoteric-OS stuff.
 $(call inherit-product, vendor/neoteric/target/product/neoteric-target.mk)
 
+# System side of the Qualcomm perf component (QPerformance/UxPerformance, libqti_performance, perfservice):
+# the framework's BoostFramework sends its touch, scroll and app launch boosts through it. The vendor side
+# stays the stock perf HAL and its configurations
+QCOM_COMMON_PATH ?= device/qcom/common
+$(call inherit-product, device/qcom/common/system/perf/qti-perf.mk)
+# TensorFlow Lite for its workload classifier model (libqti_workloadclassifiermodel); the perf component lists it
+# only on its vendor side
+PRODUCT_PACKAGES += \
+    libtflite
+
 # Scudo with zero-filled allocations like AOSP (Neoteric-OS defaults to jemalloc): stock blobs such as the
 # odm touchfeature service (which runs the THP touch pipeline) read freshly allocated memory as zero
 PRODUCT_USE_SCUDO := true
