@@ -23,6 +23,18 @@ TARGET_SCREEN_DENSITY := 520
 # Kernel (stock vendor_boot cmdline, device-specific part)
 BOARD_KERNEL_CMDLINE += swinfo.fingerprint=pudding:16/OS3.0.335.0.XPCMI:user
 
+# Neoteric-OS: its Qualcomm common layer creates the vendor firmware mount points from Soong
+# (device/qcom/common) and from make (core-utils AndroidBoardCommon.mk), like on its own devices
+BUILD_BROKEN_DUP_RULES := true
+# Its Qualcomm recovery-ext (librecovery_updater) talks to UFS through the kernel's BSG interface
+SOONG_CONFIG_NAMESPACES += ufsbsg
+SOONG_CONFIG_ufsbsg += ufsframework
+SOONG_CONFIG_ufsbsg_ufsframework := bsg
+# Its platform policy labels the powercap sysfs nodes
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/neoteric
+# Its board Soong variables are exported before build/make computes this default (same value)
+TARGET_MAX_PAGE_SIZE_SUPPORTED := 16384
+
 # OTA
 TARGET_OTA_ASSERT_DEVICE := pudding
 
