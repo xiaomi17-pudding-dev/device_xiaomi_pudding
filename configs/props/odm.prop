@@ -165,9 +165,9 @@ vendor.display.disable_ambient_hdr=1
 vendor.display.disable_cwb_call=0
 vendor.display.disable_cwb_downscale=1
 vendor.display.disable_dest_scaler=1
-# The composer writes HDR tone mapping 3D LUTs red-fastest, the AIDL flattening (and RenderEngine)
-# is blue-fastest: HDR video composed by the GPU gets red and blue swapped. Use RenderEngine tone mapping.
-vendor.display.disable_query_luts=1
+# Use the composer HDR tone mapping 3D LUTs; they are flattened with the red index moving fastest.
+vendor.display.disable_query_luts=0
+debug.renderengine.hwc_3d_lut_red_fastest=true
 vendor.display.disable_sdr_dimming=0
 vendor.display.disable_stc_dimming=1
 vendor.display.disable_system_load_check=1
