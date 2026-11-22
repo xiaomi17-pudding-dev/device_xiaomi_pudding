@@ -44,3 +44,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint="$(BUILD_FINGERPRINT)" \
     DeviceName="$(PRODUCT_SYSTEM_DEVICE)" \
     DeviceProduct="$(PRODUCT_SYSTEM_NAME)"
+
+# Private release keys, when present (LineageOS convention: vendor/lineage-priv/keys)
+-include vendor/lineage-priv/keys/keys.mk
